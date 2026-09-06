@@ -44,7 +44,7 @@ steps:
       inlineScript: |
         az storage blob upload-batch \
           --account-name $(AZURE_STORAGE_ACCOUNT) \
-          --auth-mode login \
+          --auth-mode key \
           --source allure-report \
           --destination '$web' \
           --overwrite true
